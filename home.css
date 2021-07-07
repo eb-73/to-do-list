@@ -6,6 +6,7 @@
 
 body{
     background-color: rgba(39, 0, 90, 0.87);
+    
 }
 h1{
     color: rgb(236, 236, 236);
@@ -33,9 +34,10 @@ div.items{
     width: 350px;
 }
 div.items div{
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     background-color: rgba(34, 0, 88, 0.377);
@@ -44,6 +46,8 @@ div.items div{
     border: 1px solid rgba(27, 0, 70, 0.637);
 }
 div.items div img{
+position: absolute;
+right: 0;
 width:20px;
 height: 20px;
 }
@@ -51,6 +55,8 @@ div.items div h5{
     font-size: 15px;
     color:white;
     margin: 0;
+    margin-left: 5px;
 }
+
 
 

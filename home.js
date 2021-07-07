@@ -19,6 +19,18 @@ div.addEventListener("click",function(e){
         index=items.indexOf(delItem);
         items.splice(index,1);
     }
+    if(e.target.nodeName==="INPUT"){
+        
+        if(e.target.checked === true){
+            
+            e.target.nextElementSibling.style.textDecoration="line-through";
+        }
+        else if(e.target.checked === false){
+            
+            e.target.nextElementSibling.style.textDecoration="none";
+        }
+        
+    }
 });
 
 
@@ -39,7 +51,10 @@ const add= ()=>{
     let innerDiv=document.createElement("div");
     const h=document.createElement("h5");
     const img=document.createElement("img");
+    const check=document.createElement("input");
+    check.type="checkbox";
     h.innerText=content;
+    innerDiv.append(check);
     innerDiv.append(h);
     img.src="trash.png";
     innerDiv.append(img);
